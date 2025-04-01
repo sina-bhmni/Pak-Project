@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت‌نام</title>
+    <link rel="stylesheet" href="styles/register/styles.css">
+</head>
+<body>
+
+    <!-- registration box -->
+    <div class="container">
+    <!-- register form -->
+        <form action="inc/functions.php" method="post">
+        <img src="images/logo.png" alt="">
+        <!-- inputs -->
+        <div class="form-group">
+            <div>
+                <label class="label" >نام</label>
+                <input type="text" name="firstName" id="name">
+            </div>
+            <div>
+                <label class="label">نام خانوادگی</label>
+                <input type="text" name="lastName">
+            </div>
+        </div>
+        <label class="label-in" styles="position: relative; right: 30px;" >شماره همراه</label>
+        <input type="text" class="full-width" name="username" >
+        <label class="label-in" >رمز عبور (حداقل ۸ حرفی)</label>
+        <input type="password" maxlength="16" minlength="8" name="password" class="full-width">
+        <label class="label-in">تکرار رمز عبور</label>
+        <input type="password" class="full-width">
+        <button class="submit-btn" name="do-register">ثبت نام</button>
+        </form>
+        <p>حساب کاربری دارید؟ <a href="ورود.html" class="login-link">ورود</a></p>
+    </div>
+
+</body>
+</html>

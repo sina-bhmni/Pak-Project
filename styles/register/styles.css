@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F0F0F0;
+    font-family: sans-serif;
+    direction: rtl
+}
+
+
+.container {
+    width: 465px;
+    height: 643px;
+    background: white;
+    box-shadow: 3px 6px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+img {
+    width: 181px;
+    height: 115px;
+    margin: 10px auto 20px;
+    
+}
+
+/* inputs styles */
+.form-group {
+    display: flex;
+    margin-right: 46px;
+    margin-bottom: 15px;
+}
+.form-group input {
+    width: 172px;
+    height: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 16px;
+
+}
+.full-width {
+    width: 367px;
+    height: 46px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    
+}
+
+#name{
+    margin-left: 5px;
+}
+
+
+/* labels styles */
+
+input:focus{
+
+        outline: 2px solid rgba(12, 129, 169, 1);
+
+}
+
+.label {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.label-in{
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 7px;
+    position: relative;
+    right: 45px;
+}
+
+
+
+.submit-btn {
+    width: 350px;
+    height: 54px;
+    background: #0C81A9;
+    color: white;
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+/* login page link styles */
+
+.login-link {
+    color: #0017AF;
+    text-decoration: none;
+}
