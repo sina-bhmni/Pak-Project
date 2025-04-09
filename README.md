@@ -14,7 +14,7 @@
 
 ## 🛠 تکنولوژی‌های استفاده‌شده
 
-- **فرانت‌اند:** HTML، CSS، JavaScrip
+- **فرانت‌اند:**  HTML، CSS، JavaScrip <BR>
 - **بک‌اند:** PHP 
 - **پایگاه‌داده:** MySQL
 - **ابزارها:** Git، GitHub، XAMPP 
