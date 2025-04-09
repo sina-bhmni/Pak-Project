@@ -1,0 +1,90 @@
+@import url('https://cdn.fontcdn.ir/font/iransans/Iransans.css');
+
+body {
+    font-family: 'IranSans', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.box-container {
+    width: 495px;
+    height: 497px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.input-group {
+    width: 364px;
+    height: 46px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0px 3px 0.9px 0px #0C81A980;
+}
+
+.button {
+    width: 364px;
+    height: 46px;
+    padding: 10px;
+    background-color: #0b7285;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: right;
+    padding-right: 65px;
+    margin-top: 20px;
+}
+
+.verification-info {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 65px;
+    color: #555;
+    font-size: 14px;
+}
+
+.countdown-message {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
