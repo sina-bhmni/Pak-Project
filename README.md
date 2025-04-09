@@ -30,8 +30,11 @@
 فایل inc/db.php را تنظیم کنید:
 
 $host = 'localhost';
+
 $user = 'root';
+
 $pass = '';
+
 $dbname = 'paak_db';
 
 
