@@ -35,7 +35,7 @@ $user = 'root';
 
 $pass = '';
 
-$dbname = 'paak_db';
+$dbname = 'pak';
 
 
 آدرس زیر را در مرورگر باز کنی
