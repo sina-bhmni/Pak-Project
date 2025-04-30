@@ -32,7 +32,7 @@ if (isset($_POST['do-register'])) {
             // رمز عبور را به صورت هش ذخیره می‌کنیم
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-            // کوئری را به صورت prepared statement تغییر دهید
+            
             $stmt = $db->prepare("INSERT INTO users (firstName, lastName, username, password) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $firstName, $lastName, $username, $passwordHash);
             $insert = $stmt->execute();
