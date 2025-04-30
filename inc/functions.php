@@ -14,7 +14,7 @@ if (isset($_POST['do-register'])) {
     $password = $_POST['password'];
     $passConf = $_POST['pass-conf'];
 
-    // کوئری را به صورت prepared statement تغییر دهید
+    
     $stmt = $db->prepare("SELECT * FROM users WHERE username=?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -53,7 +53,7 @@ if (isset($_POST['do-login'])) {
     $password = $_POST['password'];
     $remember = isset($_POST['remember']);
 
-    // کوئری را به صورت prepared statement تغییر دهید
+    
     $stmt = $db->prepare("SELECT * FROM users WHERE username=?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -61,14 +61,14 @@ if (isset($_POST['do-login'])) {
     $user = $result->fetch_assoc();
 
     if ($user) {
-        // رمز عبور را با هش ذخیره شده مقایسه می‌کنیم
+        
         if (password_verify($password, $user['password'])) {
             $_SESSION['loggedin'] = $username;
 
             if ($remember) {
                 setcookie('username', $username, time() + (86400 * 30), "/");
-                // ذخیره رمز عبور به صورت plain text در کوکی خطرناک است.
-                // بهتر است از روش‌های امنیتی‌تر استفاده کنید.
+                
+                
             }
 
             header("Location: ../index.php");
@@ -86,14 +86,14 @@ if (isset($_POST['do-login'])) {
 if (isset($_POST['do-reset'])) {
     $username = $_POST['username'];
 
-    // کوئری را به صورت prepared statement تغییر دهید
+  
     $stmt = $db->prepare("SELECT * FROM users WHERE username=?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $_SESSION['username'] = $username; // ذخیره نام کاربری در session
+        $_SESSION['username'] = $username;
         header("Location: ../confirm.php"); 
     } else {
         setMessage('کاربر با این شماره تلفن یافت نشد.');
@@ -141,7 +141,7 @@ if (isset($_POST['new-password']) && isset($_POST['confirm-new-password'])) {
     // رمز عبور جدید را به صورت هش ذخیره می‌کنیم
     $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
 
-    // کوئری را به صورت prepared statement تغییر دهید
+    
     $stmt = $db->prepare("UPDATE users SET password = ? WHERE username = ?");
     $stmt->bind_param("ss", $newPasswordHash, $username);
     $result = $stmt->execute();
