@@ -1,0 +1,357 @@
+body {
+    font-family: 'IRANSans', sans-serif;
+    background: #E2E2E4;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* اطمینان از راست‌چین بودن کل صفحه */
+}
+
+.horizontal-box {
+    position: fixed;
+    width: 1200px;
+    height: 80px;
+    top: 15px;
+    right: 300px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    color: #333;
+}
+
+.title-text {
+    font-weight: bold;
+    margin-left: 70px;
+}
+
+.blue-arrow {
+    color: #007bff;
+    font-size: 35px;
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.datetime {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #E2E2E4;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 36px;
+    position: relative;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 180px;
+    font-size: 14px;
+    color: #333;
+    padding-right: 10px;
+}
+
+.search-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #3b13c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    left: 0;
+}
+
+.notification-bell {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notification-bell i {
+    color: #333;
+    font-size: 16px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.profile-dropdown {
+    font-size: 12px;
+    color: #666;
+}
+
+.right-box {
+    width: 286px;
+    height: 1024px;
+    background: white;
+    position: fixed;
+    top: 1px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.hamburger {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.hamburger div {
+    width: 30px; /* عرض خطوط همبرگر */
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    margin: 3px 0;
+}
+
+.menu-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 20px;
+}
+
+.menu-icon:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-exit {
+    display: flex;
+    width: 100%;
+    gap: 800px;
+    direction: ltr;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: absolute;
+    top: 680px;
+}
+
+/* استایل جدول */
+.customer-list {
+    width: 881px;
+    margin: 226px 0 0 190px; /* جایگزین top و left برای جریان طبیعی صفحه */
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative; /* برای هماهنگی با table-scroll */
+    right: 935px;
+    bottom: 564px;
+
+}
+
+.table-scroll {
+    max-height: 400px; /* ارتفاع حداکثر برای اسکرول */
+    overflow-y: auto; /* فعال کردن اسکرول عمودی */
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* هم‌ترازی ستون‌ها */
+}
+
+thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #FF9D00;
+    font-weight: bold;
+    color: #f5f5f5;
+    padding: 12px 5px;
+    z-index: 1;
+    border-bottom: 1px solid #E2E2E4;
+    position: sticky;
+}
+
+tbody {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.customer-list th,
+.customer-list td {
+    padding: 10px 10px;
+    text-align: right;
+    
+    border-bottom: 1px solid #E2E2E4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* برای جلوگیری از به‌هم‌ریختگی متن طولانی */
+}
+
+/* تنظیم عرض ستون‌ها برای جلوگیری از به‌هم‌ریختگی */
+th:nth-child(1), td:nth-child(1) { width: 10%; } /* ردیف */
+th:nth-child(2), td:nth-child(2) { width: 30%; } /* نام محصول */
+th:nth-child(3), td:nth-child(3) { width: 25%; } /* نوع محصول */
+th:nth-child(4), td:nth-child(4) { width: 10%; } /* تعداد */
+th:nth-child(5), td:nth-child(5) { width: 18%; } /* حداقل موجودی */
+th:nth-child(6), td:nth-child(6) { width: 10%; } /* وضعیت */
+th:nth-child(7), td:nth-child(7) { width: 5%; } /* کارکرد */
+th:nth-child(8), td:nth-child(8) { width: 5%; } /* هزینه */
+th:nth-child(9), td:nth-child(9) { width: 5%; } /* عملیات */
+
+.customer-list tr:hover {
+    background-color: #f9f9f9;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.edit-btn {
+    color: #0C81A9;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+.delete-btn {
+    color: #dc3545;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+/* استایل باکس جدید */
+.new-inventory-box {
+    position: fixed;
+    width: 223px;
+    height: 49px;
+    top: 150px;
+    left: 814px;
+    background: #0C2EA9;
+    border-radius: 8px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}

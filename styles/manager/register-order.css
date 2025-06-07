@@ -1,0 +1,946 @@
+body {
+  font-family: 'IRANSans', sans-serif;
+  background: #E2E2E4;
+  margin: 0;
+  padding: 0;
+}
+
+/* استایل باکس‌های لغو و مرحله بعد */
+.buttons-container {
+  position: fixed;
+  top: 630px;
+  left: 480px;
+  display: flex;
+  gap: 20px;
+  z-index: 20;
+}
+
+.custom-box {
+  width: 113px;
+  height: 36px;
+  border-radius: 10px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.custom-box:hover {
+  filter: brightness(1.1);
+}
+
+.cancel-box {
+  background: #F90606;
+}
+
+.cancel-box .close-icon {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.next-step-box {
+  background: #0C81A9;
+  gap: 8px;
+}
+
+.next-step-box .arrow-icon {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.persian-number {
+  font-family: 'IRANSans', sans-serif;
+}
+
+.horizontal-box {
+  position: fixed;
+  width: 1200px;
+  height: 80px;
+  top: 15px;
+  right: 300px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #E2E2E4;
+  border-radius: 20px;
+  padding: 0 15px;
+  height: 36px;
+  position: relative;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 180px;
+  font-size: 14px;
+  color: #333;
+  padding-right: 10px;
+}
+
+.search-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #3b13c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  left: 0;
+}
+
+.datetime {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.notification-bell {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notification-bell i {
+  color: #333;
+  font-size: 16px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.profile-dropdown {
+  font-size: 12px;
+  color: #666;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.horizontal-box .icon-text {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  color: #333;
+}
+
+.horizontal-box .icon-text .title-text {
+  font-weight: bold;
+  margin-left: 70px;
+}
+
+.blue-arrow {
+  color: #007bff;
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.right-box {
+  width: 286px;
+  height: 1024px;
+  background: white;
+  position: fixed;
+  top: 1px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.hamburger {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+.hamburger div {
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  margin: 3px 0;
+}
+
+.menu-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 20px;
+}
+
+.menu-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-exit {
+  display: flex;
+  display: inline-flex;
+  width: 100%;
+  gap: 800px;
+  direction: ltr;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: absolute;
+  top: 680px;
+}
+
+/* باکس جدید اول */
+.new-box {
+  position: fixed;
+  width: 320px;
+  height: 37px;
+  top: 120px;
+  left: 455px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  direction: rtl;
+}
+
+.right-text {
+  background-color: #E2E2E4;
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.left-text {
+  cursor: pointer;
+}
+
+/* باکس جستجوی کد مشتری */
+.customer-search-box {
+  width: 256px;
+  height: 56px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.customer-search-box::before {
+  content: "انتخاب مشتری";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.customer-search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  font-family: 'IRANSans', sans-serif;
+  padding-right: 30px;
+}
+
+.customer-search-box .search-icon {
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  left: 1090px;
+  background: transparent;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+/* باکس نوع آیتم */
+.item-type-box {
+  width: 127px;
+  height: 13px;
+  background: #F2F2F7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.item-type-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+.item-type-box .arrow {
+  color: #999;
+  font-size: 14px;
+}
+
+/* باکس آیتم‌ها */
+.item-options-box {
+  width: 127px;
+  background: #F2F2F7;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -12px;
+}
+
+.item-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.item-option:last-child {
+  margin-bottom: 0;
+}
+
+.item-option input[type="checkbox"] {
+  accent-color: #0C81A9;
+  cursor: pointer;
+}
+
+.item-option label {
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* باکس نوع خدمات */
+.service-type-box {
+  width: 127px;
+  height: 13px;
+  background: #F2F2F7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.service-type-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+.service-type-box .arrow {
+  color: #999;
+  font-size: 14px;
+}
+
+/* باکس خدمات */
+.service-options-box {
+  width: 127px;
+  height: 65px;
+  background: #F2F2F7;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -12px;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.service-option:last-child {
+  margin-bottom: 0;
+}
+
+.service-option input[type="checkbox"] {
+  accent-color: #0C81A9;
+  cursor: pointer;
+}
+
+.service-option label {
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* باکس تعداد */
+.quantity-box {
+  width: 98px;
+  height: 44px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+.quantity-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quantity-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 10px;
+  padding: 0 5px;
+}
+
+/* باکس قیمت واحد */
+.unit-price-box {
+  width: 98px;
+  height: 33px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.unit-price-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* باکس قیمت نهایی */
+.final-price-box {
+  width: 98px;
+  height: 28px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.final-price-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* باکس افزودن آیتم جدید */
+.add-item-box {
+  width: 114.5px;
+  height: 29px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  color: #0C81A9;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.add-item-box:hover {
+  background: #f0f8ff;
+}
+
+/* کانتینر برای باکس‌های ردیف اول */
+.first-row-container {
+  position: fixed;
+  top: 180px;
+  right: 300px;
+  display: flex;
+  gap: 2px;
+  z-index: 5;
+}
+
+/* کانتینر برای باکس‌های ردیف دوم */
+.second-row-container {
+  position: fixed;
+  top: 240px;
+  right: 588px;
+  display: flex;
+  gap: 2px;
+  z-index: 5;
+}
+
+/* استایل برای گروه‌های باکس */
+.box-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-group:nth-child(2)::before {
+  content: "اقلام سفارش";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* باکس توضیحات جدید */
+.description-container {
+  position: fixed;
+  top: 270px;
+  left: 958px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.description-box {
+  width: 240px;
+  height: 134px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.description-box::before {
+  content: "توضیحات";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.description-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.description-icon {
+  color: #9d9d9d;
+  font-size: 20px;
+}
+
+.description-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.description-text {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* استایل‌های جدید برای باکس‌های اضافه شده */
+.additional-boxes-container {
+  position: fixed;
+  top: 470px;
+  right: 300px;
+  display: flex;
+  gap: 32px;
+  z-index: 5;
+}
+
+/* استایل‌های گروه آدرس */
+.address-group {
+  position: relative;
+  width: 256px;
+}
+
+.address-box {
+  width: 100%;
+  height: 56px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.address-box::before {
+  content: "آدرس";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.new-address-box {
+  width: 150px;
+  height: 36px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0C81A9;
+  font-weight: bold;
+  font-size: 12px;
+  gap: 8px;
+  margin-top: 10px;
+  position: relative;
+  left: 0px;
+}
+
+/* استایل‌های گروه تاریخ */
+.date-group {
+  position: relative;
+  width: 256px;
+
+}
+
+.date-box,
+.delivery-date-box {
+  width: 100%;
+  height: 56px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.date-box {
+  margin-bottom: 30px;
+}
+
+.date-box::before {
+  content: "تاریخ دریافت";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delivery-date-box::before {
+  content: "تاریخ تحویل";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* استایل‌های گروه ساعت */
+.time-group {
+  position: relative;
+  width: 256px;
+
+}
+
+.time-box,
+.delivery-time-box {
+  width: 100%;
+  height: 56px;
+  background: #F2F2F7;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.time-box {
+  margin-bottom: 30px;
+}
+
+.time-box::before {
+  content: "ساعت دریافت";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delivery-time-box::before {
+  content: "ساعت تحویل";
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* استایل‌های گروه پرداخت */
+.payment-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 127px;
+}
+
+.payment-type-box {
+  width: 100%;
+  height: 13px;
+  background: #F2F2F7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.payment-type-box span {
+  font-size: 14px;
+  color: #333;
+}
+
+.payment-type-box .arrow {
+  color: #999;
+  font-size: 14px;
+}
+
+.payment-options-box {
+  width: 100%;
+  background: #F2F2F7;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -12px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.payment-option:last-child {
+  margin-bottom: 0;
+}
+
+.payment-option input[type="radio"] {
+  accent-color: #0C81A9;
+  cursor: pointer;
+}
+
+.payment-option label {
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* استایل‌های عمومی */
+.address-box input,
+.date-box input,
+.time-box input,
+.delivery-date-box input,
+.delivery-time-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  font-family: 'IRANSans', sans-serif;
+  padding-right: 10px;
+}
+
+.date-icon,
+.time-icon {
+  color: #999;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* استایل باکس خلاصه قیمت */
+.price-summary-container {
+  position: fixed;
+  width: 252px;
+  height: 120px;
+  top: 590px;
+  left: 80px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.price-value {
+  font-family: 'IRANSans', sans-serif;
+  font-weight: bold;
+}
+
+.final-price-row {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-top: 5px;
+
+}

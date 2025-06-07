@@ -4,7 +4,7 @@ $servername = 'localhost';
 $username = 'root';
 $password = '';
 $dbname = 'Pak';
-
+global $db;
 $db = mysqli_connect($servername, $username, $password, $dbname);
 mysqli_query($db, 'SET NAMES utf8');
 

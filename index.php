@@ -1,1 +1,4 @@
-<?php require_once 'inc/functions.php'; ?>
+<?php
+  header("Location: auth/login.php");
+  exit();
+?>
